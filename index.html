@@ -9,19 +9,30 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2500/2500426.png" type="image/x-icon">
     <!--CSS-->
     <link rel="stylesheet" href="./styles/itc-slider.css">
+    <link rel="stylesheet" href="./styles/mainPage.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <!-- JavaScript -->
     <script src="./script/slider/itc-slider.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <header class="mainHeader">
         <nav>
-
+            <ul>
+                <li><a href="#home" class="pages">home</a></li>
+                <li><a href="#blog" class="pages">Fashion</a></li>
+                <li><a href="#news" class="pages">account</a></li>
+                <li><a href="#about" class="pages">About us</a></li>
+            </ul>
         </nav>
     </header>
 
     <main class="mainPage">
         <article>
+            <!-- <section class="bigImage">
+                <p class="bigImageText">Cat Fashion</p>
+            </section>
+
             <section class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true">
                 <div class="itc-slider__wrapper">
                     <div class="itc-slider__items">
@@ -44,11 +55,10 @@
                             <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="">
                         </div>
                     </div>
-                    <!-- Кнопки для перехода к предыдущему и следующему слайду -->
                     <button class="itc-slider__btn itc-slider__btn_prev"></button>
                     <button class="itc-slider__btn itc-slider__btn_next"></button>
                 </div>
-            </section>
+            </section> -->
 
             <section>
             </section>
@@ -79,12 +89,24 @@
             </section>
         </article>
     </main>
-
-    <footer>
-        <nav>
-
-        </nav>
-    </footer>
+<footer>
+    <ul class="social">
+        <li><a href="#"><ion-icon name="paper-plane-outline"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-vk"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"><ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <p>©2021 Online Tutorials | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

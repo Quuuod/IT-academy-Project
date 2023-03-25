@@ -1,0 +1,43 @@
+* {
+
+}
+
+.mainHeader{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.mainHeader ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainHeader ul li{
+    background-color: rgba(0, 0, 0, 0.671);
+    padding: 10px;
+}
+
+.mainHeader ul {
+    list-style-type: none;
+}
+
+a.pages:active,
+a.pages:hover,
+a.pages {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bigImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg");
+    background-size: cover;
+    max-width: 100%;
+    height: 700px;
+}
+
+.bigImageText{
+    font-size: 50px;
+}
