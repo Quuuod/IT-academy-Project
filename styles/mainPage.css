@@ -1,18 +1,31 @@
 * {
-
+    font-family: "Montserrat-VariableFont_wght";
 }
 
-.mainHeader{
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    background: #3586ff;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.mainHeader {
     position: absolute;
     left: 0;
     right: 0;
 }
+
 .mainHeader ul {
     display: flex;
     flex-wrap: wrap;
 }
 
-.mainHeader ul li{
+.mainHeader ul li {
     background-color: rgba(0, 0, 0, 0.671);
     padding: 10px;
 }
@@ -30,14 +43,72 @@ a.pages {
 
 .bigImage {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg");
+    align-items: flex-end;
+    background: url('../images/mainPageCat.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
-    height: 700px;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-.bigImageText{
-    font-size: 50px;
+.bigImageText {
+    margin: auto;
+    margin-bottom: 3%;
+    font-size: 10em;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "B612-Regular";
+    text-shadow: 2px 2px 2px #3586ff;
+}
+
+@media (max-width: 880px) {
+    .bigImageText {
+        font-size: 7em;
+    }
+
+    .bigImage {
+        background-repeat: repeat;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 615px) {
+    .bigImageText {
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 530px) {
+    .bigImageText {
+        font-size: 5em;
+    }
+}
+
+@media (max-width: 450px) {
+    .bigImageText {
+        font-size: 4em;
+    }
+}
+@media (max-width: 350px) {
+    .bigImageText {
+        font-size: 3em;
+    }
+}
+
+
+@font-face {
+    font-family: "B612-Regular";
+    src: url("../fonts/B612/B612-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-VariableFont_wght";
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }

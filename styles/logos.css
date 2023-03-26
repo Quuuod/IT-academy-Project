@@ -1,0 +1,61 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 48px;
+    height: 48px;
+    float: left;
+    background:
+        #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    margin: 0 5px 0 5px;
+    padding: 6px;
+    color:
+        #000;
+}
+.social a:active{
+    box-shadow: none;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.fa {
+    font-size: 2.5em !important;
+}
+
+.github a:hover {
+    background:
+        #191919;
+    color:
+        #fff;
+}
+
+.instagram a:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color:
+        #fff;
+}
+
+.vk a:hover {
+    background:
+        #5d84ae;
+    color:
+        #fff;
+}
+
+.linkedin a:hover {
+    background:
+        #0e76a8;
+    color:
+        #fff;
+}
+
+.telegram a:hover {
+    background:
+        #249bd7;
+    color:
+        #fff;
+}

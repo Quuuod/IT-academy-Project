@@ -6,9 +6,6 @@
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
     height: auto;
     /*поля для контента*/
@@ -20,8 +17,6 @@ footer {
     align-items: center;
     /*в центре по вертикали*/
     flex-direction: column;
-    margin-top: 100px;
-    /*отступ сверху*/
 }
 
 .social,
@@ -32,6 +27,7 @@ footer {
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
+    padding: 0 5% 0 5%;
     /*разрешен перенос на новую строку*/
 }
 
@@ -39,18 +35,6 @@ footer {
 .menu li {
     list-style: none;
     /*удалить черные маркеры*/
-}
-
-.social li a {
-    font-size: 2em;
-    /*размер иконок*/
-    color: #fff;
-    /*цвет иконок*/
-    margin: 0 10px;
-    display: inline-block;
-    /*отображать как строчно-блочный элемент*/
-    transition: 0.5s;
-    /*плавный переход*/
 }
 
 .menu li a {
