@@ -1,0 +1,23 @@
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+header ul li {
+    background-color: rgba(0, 0, 0, 0.671);
+    padding: 10px;
+    width: 80px;
+}
+
+header ul {
+    list-style-type: none;
+}

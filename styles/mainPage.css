@@ -14,26 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-.mainHeader {
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.mainHeader ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.mainHeader ul li {
-    background-color: rgba(0, 0, 0, 0.671);
-    padding: 10px;
-}
-
-.mainHeader ul {
-    list-style-type: none;
-}
-
 a.pages:active,
 a.pages:hover,
 a.pages {
@@ -112,3 +92,4 @@ a.pages {
     font-style: normal;
     font-weight: normal;
 }
+
