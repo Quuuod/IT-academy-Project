@@ -1,0 +1,35 @@
+.teamPage {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    /* 5px rounded corners */
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.teamContainer {
+    width: 80%;
+    position: absolute;
+    margin: 150px 50px 0 50px;
+}
+.teamContainer section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.teamContainer .card {
+    display: inline-block;
+    padding: 20px;
+    width: 30vw;
+    margin: 10px 15px 10px 0;
+}
