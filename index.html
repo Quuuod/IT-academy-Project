@@ -14,118 +14,162 @@
     <link rel="stylesheet" href="./styles/logos.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/teamPage.css">
+    <link rel="stylesheet" href="./styles/general.css">
     <!-- JavaScript -->
     <script src="./script/slider/itc-slider.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#home" class="pages sideImgLeft"><img src="../IT-academy-Project/images/free-icon-cat-2500354.png"
-                    alt=""></a>
-            <ul class="headerLinks">
-                <li><a href="#blog" class="pages">Fashion</a></li>
-                <li><a href="#news" class="pages">account</a></li>
-                <li><a href="#about" class="pages">About us</a></li>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="#home" class="pages sideImgLeft"><img
+                        src="../IT-academy-Project/images/free-icon-cat-2500354.png" alt=""></a>
+                <ul class="headerLinks">
+                    <li><a href="#blog" class="pages">Fashion</a></li>
+                    <li><a href="#news" class="pages">account</a></li>
+                    <li><a href="#about" class="pages">About us</a></li>
+                </ul>
+                <a href="#account" class="pages sideImgRight"><span>Account</span> <img
+                        src="https://cdn-icons-png.flaticon.com/512/10186/10186342.png" alt=""></a>
+            </nav>
+        </header>
+
+
+        <main class="mainPage">
+            <article>
+                <section class="bigImage">
+                    <p class="bigImageText">Cat Fashion</p>
+                </section>
+
+                <section class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true">
+                    <div class="itc-slider__wrapper">
+                        <div class="itc-slider__items">
+                            <div class="itc-slider__item">
+                                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
+                                    alt="">
+                            </div>
+                            <div class="itc-slider__item">
+                                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
+                                    alt="">
+                            </div>
+                            <div class="itc-slider__item">
+                                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
+                                    alt="">
+                            </div>
+                            <div class="itc-slider__item">
+                                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
+                                    alt="">
+                            </div>
+                            <div class="itc-slider__item">
+                                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
+                                    alt="">
+                            </div>
+                            <div class="itc-slider__item">
+                                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                        <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                        <button class="itc-slider__btn itc-slider__btn_next"></button>
+                    </div>
+                </section>
+        </main>
+
+
+        <main class="teamPage">
+            <article class="teamContainer">
+                <section>
+
+                    <div class="card">
+                        <img src="./images/team/Risya.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Rysya</b></h4>
+                            <p>CEO and owner</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/team/Viskas.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Viskas</b></h4>
+                            <p>Vice president</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/team/Kvasych.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Kvasych</b></h4>
+                            <p>Chief Technology Officer</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/team/Markiza.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Markiza</b></h4>
+                            <p>HR-manager</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/team/Shlepa.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Shlepa</b></h4>
+                            <p>Chief Information Officer</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/team/Persei.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Persei</b></h4>
+                            <p>System/Network administrator</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/team/Heda.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Heda</b></h4>
+                            <p>Software Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/team/Jija.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Jija</b></h4>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+
+                </section>
+            </article>
+        </main>
+
+
+        <footer>
+            <ul class="social">
+                <li class="github"><a href=""><i class="fa fa-github fa-2x"></i></a></li>
+                <li class="instagram"><a href=""><i class="fa fa-instagram fa-2x"></i></a></li>
+                <li class="vk"><a href=""><i class="fa fa-vk fa-2x"></i></a></li>
+                <li class="linkedin"><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                <li class="telegram"><a href=""><i class="fa fa-paper-plane fa-2x"></i></a></li>
             </ul>
-            <a href="#account" class="pages sideImgRight"><span>Account</span> <img
-                    src="https://cdn-icons-png.flaticon.com/512/10186/10186342.png" alt=""></a>
-        </nav>
-    </header>
+            <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Team</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <p>©2023 Cat Fashion Co | All Rights Meowed</p>
+        </footer>
 
+    </div>
 
-    <main class="mainPage" hidden>
-        <article>
-            <section class="bigImage">
-                <p class="bigImageText">Cat Fashion</p>
-            </section>
-
-            <section class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true">
-                <div class="itc-slider__wrapper">
-                    <div class="itc-slider__items">
-                        <div class="itc-slider__item">
-                            <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="">
-                        </div>
-                        <div class="itc-slider__item">
-                            <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="">
-                        </div>
-                        <div class="itc-slider__item">
-                            <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="">
-                        </div>
-                        <div class="itc-slider__item">
-                            <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="">
-                        </div>
-                        <div class="itc-slider__item">
-                            <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="">
-                        </div>
-                        <div class="itc-slider__item">
-                            <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <button class="itc-slider__btn itc-slider__btn_prev"></button>
-                    <button class="itc-slider__btn itc-slider__btn_next"></button>
-                </div>
-            </section>
-    </main>
-
-
-    <main class="teamPage">
-        <article class="teamContainer">
-            <section>
-                <div class="card">
-                    <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>HTML CSS</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>HTML CSS</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>HTML CSS</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" alt="Avatar" style="width:100%">
-                    <div class="container">
-                        <h4><b>HTML CSS</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-                </div>
-
-            </section>
-        </article>
-    </main>
-
-
-    <footer>
-        <ul class="social">
-            <li class="github"><a href=""><i class="fa fa-github fa-2x"></i></a></li>
-            <li class="instagram"><a href=""><i class="fa fa-instagram fa-2x"></i></a></li>
-            <li class="vk"><a href=""><i class="fa fa-vk fa-2x"></i></a></li>
-            <li class="linkedin"><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
-            <li class="telegram"><a href=""><i class="fa fa-paper-plane fa-2x"></i></a></li>
-        </ul>
-        <ul class="menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Team</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-        <p>©2023 Cat Fashion Co | All Rights Meowed</p>
-    </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

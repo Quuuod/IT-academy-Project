@@ -1,7 +1,6 @@
 .teamPage {
     display: flex;
     justify-content: center;
-    margin-bottom: 200px;
 }
 
 .card {
@@ -12,13 +11,12 @@
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
-img {
+.teamPage img {
     border-radius: 5px 5px 0 0;
 }
 
 .teamContainer {
-    width: 80%;
-    position: absolute;
+    width: 70%;
     margin: 150px 50px 0 50px;
 }
 .teamContainer section{
@@ -30,6 +28,23 @@ img {
 .teamContainer .card {
     display: inline-block;
     padding: 20px;
-    width: 30vw;
+    width: 20vw;
     margin: 10px 15px 10px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .teamContainer .card{
+        width: 50vw;
+    }
+    .teamContainer{
+        margin-top: 200px;
+    }
+}
+@media screen and (min-height: 1000px){
+    .teamContainer{
+        margin-top: 200px;
+    }
+    .teamContainer .card{
+        font-size: 2em;
+    }
 }
