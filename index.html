@@ -15,24 +15,38 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/teamPage.css">
     <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/contact.css   ">
+    <link rel="stylesheet" href="./styles/login.css">
     <!-- JavaScript -->
     <script src="./script/slider/itc-slider.js" defer></script>
+    <script src="./script/burger.js" defer></script>
 </head>
 
 <body>
+    
     <div class="wrapper">
         <header>
-            <nav>
-                <a href="#home" class="pages sideImgLeft"><img
-                        src="../IT-academy-Project/images/free-icon-cat-2500354.png" alt=""></a>
-                <ul class="headerLinks">
-                    <li><a href="#blog" class="pages">Fashion</a></li>
-                    <li><a href="#news" class="pages">account</a></li>
-                    <li><a href="#about" class="pages">About us</a></li>
-                </ul>
-                <a href="#account" class="pages sideImgRight"><span>Account</span> <img
-                        src="https://cdn-icons-png.flaticon.com/512/10186/10186342.png" alt=""></a>
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar__wrap">
+                        <div class="hamb">
+                            <div class="hamb__field" id="hamb">
+                                <span class="bar"></span> <span class="bar"></span>
+                                <span class="bar"></span>
+                            </div>
+                        </div>
+                        <ul class="menu" id="menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Account</a></li>
+                        </ul>
+                        <a href="#" class="logo" id="logo"><img
+                                src="../IT-academy-Project/images/free-icon-cat-2500354.png" alt=""></a>
+                    </div>
+                </div>
             </nav>
+            <div class="popup" id="popup"></div>
+            <div class="shadow hidden"></div>
         </header>
 
 
@@ -149,6 +163,43 @@
             </article>
         </main>
 
+        <main class="contactPage">
+            <article>
+                <section class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2219.5492394903217!2d23.7674966154447!3d52.067318277430566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210dc9dd031edd%3A0xaa9393b1e2550fba!2z0YPQuy4g0JbQuNGC0L3Rj9GPIDMyLCDQkdGA0LXRgdGCIDIyNDAyMg!5e1!3m2!1sru!2sby!4v1680027422407!5m2!1sru!2sby"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+                <section class="contacts">
+                    <div>
+                        <p>Contact Us</p>
+                        <p>Number: <span>+375-29-208-71-56</span></p>
+                        <p>Mail: <span>prizraklogan@gmail.com</span></p>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <main class="login">
+            <div id='login'>
+                <div class="title">Sign In</div>
+        
+                <div class="input-container ic1" id="loginIdContainer">
+                    <input id="loginId" class="input" type="text" placeholder=" " />
+                    <div class="cut cut-short"></div>
+                    <label for="loginId" class="placeholder">Login</label>
+                </div>
+        
+                <div class="input-container ic2">
+                    <input id="emailLogin" class="input" type="text" placeholder=" " />
+                    <div class="cut cut-short"></div>
+                    <label for="emailLogin" class="placeholder">Password</label>
+                </div>
+                <button type="text" class="submit" id="loginSubmit">Sign in</button>
+            </div>
+        </main>
 
         <footer>
             <ul class="social">
@@ -160,8 +211,6 @@
             </ul>
             <ul class="menu">
                 <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
                 <li><a href="">Team</a></li>
                 <li><a href="">Contact</a></li>
             </ul>

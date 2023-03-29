@@ -1,0 +1,55 @@
+.contactPage{
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map iframe{
+    width: 70vw;
+    height: 90vh;
+    background: #3586ff;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #FFF;
+    margin:20px;
+    box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+}
+
+.contacts{
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #3586ff;
+    font-size: 2vw;
+}
+
+.contacts span:hover,
+.contacts span:active{
+    text-shadow: 2px 2px 2px #ffffff;
+    cursor: pointer;
+}
+
+.contacts p{
+    margin: 3px;
+    text-align: center;
+}
+.contacts div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    padding: 30px;
+    box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+}
+
+@media screen and (max-width: 700px) {
+    .contacts{
+        font-size: 4vw;
+    }
+}

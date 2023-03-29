@@ -1,6 +1,7 @@
 .teamPage {
     display: flex;
     justify-content: center;
+    /* display: none; */
 }
 
 .card {

@@ -29,7 +29,6 @@
 .itc-slider__item {
   flex: 0 0 100%;
   max-width: 100%;
-  background: #3586ff;
   user-select: none;
   will-change: transform;
 }
