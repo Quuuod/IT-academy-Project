@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./styles/loginRegister.css">
     <link rel="stylesheet" href="./styles/hidden.css">
     <link rel="stylesheet" href="./styles/404.css">
+    <link rel="stylesheet" href="./styles/account.css">
     <!-- JavaScript -->
     <script src="./script/slider/itc-slider.js" defer></script>
     <script src="./script/burger.js" defer></script>
@@ -188,8 +189,28 @@
         </main>
 
         <main class="account">
+            <div class="title">Your Account</div>
+
+            <div class="input-container ic1 avatar" id="loginIdContainer">
+                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
+                    alt=" ">
+
+            </div>
+
+            <div class="input-container ic1" id="loginIdContainer">
+                <p id="loginId" class="input" type="text" placeholder=" ">QWE</p>
+                <div class="cut cut-short"></div>
+                <label for="loginId" class="placeholder">Login</label>
+            </div>
+
+            <div class="input-container ic2">
+                <p id="passwordId" class="input" type="text" placeholder=" ">213123</p>
+                <div class="cut cut-short"></div>
+                <label for="passwordId" class="placeholder">Password</label>
+            </div>
 
         </main>
+
 
         <main class="login">
             <div class="title">Sign In</div>
@@ -201,9 +222,9 @@
             </div>
 
             <div class="input-container ic2">
-                <input id="emailLogin" class="input" type="text" placeholder=" " />
+                <input id="passwordId" class="input" type="text" placeholder=" " />
                 <div class="cut cut-short"></div>
-                <label for="emailLogin" class="placeholder">Password</label>
+                <label for="passwordId" class="placeholder">Password</label>
             </div>
             <button type="text" class="submit" id="loginSubmit">Sign in</button>
         </main>
@@ -226,13 +247,11 @@
             <div class="input-container ic2">
                 <input id="email" class="input" type="text" placeholder=" " />
                 <div class="cut cut-short"></div>
-                <label for="email" class="placeholder">Confirm the password</label>
+                <label for="email" class="placeholder">Confirm password</label>
             </div>
 
             <button type="text" class="submit" id="submit">Sign Up</button>
         </main>
-
-
 
         <main class="page404">
             <img src="https://http.cat/404" alt="">

@@ -12,6 +12,7 @@
     font-family: "Trebuchet MS", "Lucida Sans";
 }
 
+.account,
 .new,
 .login {
     border: 5px solid rgb(0, 90, 146);
@@ -26,7 +27,7 @@
     box-sizing: border-box;
     height: auto;
     padding: 20px;
-    width: 400px;
+    width: 70vw;
 }
 
 .title {
@@ -90,6 +91,7 @@
     transform-origin: 0 50%;
     transition: transform 200ms, color 200ms;
     top: 20px;
+    font-size: 2vh;
 }
 
 .submit {

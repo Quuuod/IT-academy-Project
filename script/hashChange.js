@@ -6,11 +6,11 @@ const newUser = document.querySelector(".new")
 const account = document.querySelector(".account")
 const page404 = document.querySelector(".page404")
 
-
 const hideAll = () => {
     main.classList.add('hidden');
     contacts.classList.add('hidden');
     team.classList.add('hidden');
+    account.classList.add('hidden');
     login.classList.add('hidden');
     newUser.classList.add('hidden');
     page404.classList.add('hidden');
