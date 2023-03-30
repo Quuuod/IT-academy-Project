@@ -4,7 +4,7 @@ footer {
     width: 100%;
     height: auto;
     /*поля для контента*/
-    background: #3586ff;
+    background: rgb(0, 90, 146) ;
     /*цвет футера*/
     display: flex;
     justify-content: center;
@@ -28,14 +28,14 @@ footer {
     /*разрешен перенос на новую строку*/
 }
 
-.social li,
-.menu li {
+footer .social li,
+footer .menu li {
     list-style: none;
     /*удалить черные маркеры*/
 }
 
-.menu li a {
-    font-size: 1.5em;
+footer .menu li a {
+    font-size: 1.3em;
     /*размер ссылок меню*/
     color: #fff;
     /*цвет ссылок меню*/
@@ -47,13 +47,13 @@ footer {
     display: inline-block;
 }
 
-.menu li a:hover {
+footer .menu li a:hover {
     opacity: 1;
 }
 
 footer p {
-    color: #fff;
+    color: #c4c4c4;
     text-align: center;
     margin-top: 15px;
-    font-size: 1.1em;
+    font-size: 0.8em;
 }

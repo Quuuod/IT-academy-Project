@@ -9,12 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 5px solid rgb(0, 90, 146);
+    border-top: 5px solid rgb(0, 90, 146);
+    border-bottom: 4px solid rgb(0, 90, 146);
+    border-collapse: collapse;
 }
 .map iframe{
     width: 70vw;
     height: 90vh;
-    background: #3586ff;
-    padding: 30px;
     box-sizing: border-box;
     color: #FFF;
     margin:20px;
@@ -23,14 +25,21 @@
 
 .contacts{
     text-decoration: none;
-    color: #ffffff;
-    text-shadow: 2px 2px 2px #3586ff;
+    color: #fff;
+    opacity: 0.75;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
     font-size: 2vw;
+    border: 5px solid rgb(0, 90, 146);
+    border-top: 1px solid rgb(0, 90, 146);
+    border-bottom: 3px solid rgb(0, 90, 146);
+    border-collapse: collapse;
 }
 
 .contacts span:hover,
 .contacts span:active{
-    text-shadow: 2px 2px 2px #ffffff;
+    text-shadow: 2px 2px 2px rgb(0, 90, 146);
     cursor: pointer;
 }
 

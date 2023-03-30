@@ -67,10 +67,3 @@
     animation: animate 8s linear infinite;
 }
 
-@media (max-width: 1040px) {
-    .bigImage {
-        width: 100%;
-        background-size: contain;
-        background-repeat: repeat;
-    }
-}

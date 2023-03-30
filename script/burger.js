@@ -3,6 +3,7 @@ const popup = document.querySelector("#popup");
 const body = document.body;
 const navbar = document.querySelector(".navbar")
 const shadow = document.querySelector(".shadow")
+const logo = document.querySelector(".logo")
 // Клонируем меню, чтобы задать свои стили для мобильной версии
 const menu = document.querySelector("#menu").cloneNode(1);
 
@@ -17,7 +18,8 @@ function hambHandler(e) {
   hamb.classList.toggle("active");
   body.classList.toggle("noscroll");
   navbar.classList.toggle("opened")
-  shadow.classList.toggle("hidden")
+  shadow.classList.toggle("hiddenShadow")
+  logo.classList.toggle("hidden")
   renderPopup();
 }
 
@@ -40,6 +42,7 @@ function closeOnClick() {
   popup.classList.remove("open");
   hamb.classList.remove("active");
   body.classList.remove("noscroll");
-  shadow.classList.add('hidden')
+  shadow.classList.add('hiddenShadow')
   navbar.classList.remove('opened')
+  logo.classList.remove("hidden")
 }

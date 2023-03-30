@@ -1,13 +1,17 @@
 .teamPage {
     display: flex;
     justify-content: center;
-    /* display: none; */
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 5px;
+    border: 5px solid rgb(0, 90, 146);
+    border-top: 5px solid rgb(0, 90, 146);
+    border-bottom: 3px solid rgb(0, 90, 146);
+    border-collapse: collapse;
+    color: white;
     /* 5px rounded corners */
 }
 
@@ -33,18 +37,13 @@
     margin: 10px 15px 10px 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     .teamContainer .card{
         width: 50vw;
     }
-    .teamContainer{
-        margin-top: 200px;
-    }
 }
 @media screen and (min-height: 1000px){
-    .teamContainer{
-        margin-top: 200px;
-    }
+
     .teamContainer .card{
         font-size: 2em;
     }
