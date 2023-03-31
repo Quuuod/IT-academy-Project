@@ -24,11 +24,14 @@
     <script src="./script/slider/itc-slider.js" defer></script>
     <script src="./script/burger.js" defer></script>
     <script src="./script/hashChange.js" defer></script>
+    <script src="./script/newAvatar.js" defer></script>
+    <script src="./script/copyContact.js" defer></script>
+    <script src="./script/SignUp.js" defer></script>
 </head>
 
 <body>
-
     <div class="wrapper">
+
         <header>
             <nav class="navbar">
                 <div class="container">
@@ -41,13 +44,13 @@
                         </div>
                         <ul class="menu" id="menu">
                             <li><a href="#main">Home</a></li>
-                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#fashion">Fashion</a></li>
                             <li><a href="#account">Account</a></li>
                             <li><a href="#login">Sign In</a></li>
                             <li><a href="#new">Sign Up</a></li>
-                            <li><a id="logout">Logout</a></li>
+                            <li><a href="#" id="logout">Logout</a></li>
                         </ul>
-                        <a href="#" class="logo" id="logo"><img
+                        <a href="#fashion" class="logo" id="logo"><img
                                 src="../IT-academy-Project/images/free-icon-cat-2500354.png" alt=""></a>
                     </div>
                 </div>
@@ -56,11 +59,10 @@
             <div class="shadow hiddenShadow"></div>
         </header>
 
-
         <main class="mainPage">
             <article>
                 <section class="bigImage">
-                    <a class="bigImageText" href="#">Go Fashion</a>
+                    <a class="bigImageText" href="#fashion">Go Fashion</a>
                 </section>
 
                 <section class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true">
@@ -181,20 +183,30 @@
                 <section class="contacts">
                     <div>
                         <p>Contact Us</p>
-                        <p>Number: <span>+375-29-208-71-56</span></p>
-                        <p>Mail: <span>prizraklogan@gmail.com</span></p>
+                        <p>Number: <span id = "contactNumber">+375-29-208-71-56</span></p>
+                        <p>Mail: <span id = "contactEmail">prizraklogan@gmail.com</span></p>
                     </div>
                 </section>
             </article>
         </main>
 
+        <main class="fashionPage">
+            <section></section>
+        </main>
+
+
         <main class="account">
             <div class="title">Your Account</div>
 
             <div class="input-container ic1 avatar" id="loginIdContainer">
-                <img src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg"
-                    alt=" ">
+                <label for="newAvatar"><img id="avatar"
+                        src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" /></label>
 
+            </div>
+            <div class="input-container ic1 newAvatar hidden" id="loginIdContainer">
+                <input id="newAvatar" class="input" type="text" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="newAvatar" class="placeholder">Enter URL for new profile picture</label>
             </div>
 
             <div class="input-container ic1" id="loginIdContainer">
@@ -211,7 +223,6 @@
 
         </main>
 
-
         <main class="login">
             <div class="title">Sign In</div>
 
@@ -227,30 +238,33 @@
                 <label for="passwordId" class="placeholder">Password</label>
             </div>
             <button type="text" class="submit" id="loginSubmit">Sign in</button>
+            <button type="text" class="submit" id="signUp"><a href="#new">Dont have an account yet?</a></button>
         </main>
 
         <main class="new">
             <div class="title">Sign Up</div>
 
             <div class="input-container ic1">
-                <input id="firstname" class="input" type="text" placeholder=" " />
+                <input id="username" class="input" type="text" placeholder=" " />
                 <div class="cut"></div>
-                <label for="firstname" class="placeholder">Create a username</label>
+                <label for="username" class="placeholder">Create a username</label>
             </div>
 
             <div class="input-container ic2">
-                <input id="lastname" class="input" type="text" placeholder=" " />
+                <input id="password" class="input" type="text" placeholder=" " />
                 <div class="cut"></div>
-                <label for="lastname" class="placeholder">Create a password</label>
+                <label for="password" class="placeholder">Create a password</label>
             </div>
 
             <div class="input-container ic2">
-                <input id="email" class="input" type="text" placeholder=" " />
+                <input id="confirm" class="input" type="text" placeholder=" " />
                 <div class="cut cut-short"></div>
-                <label for="email" class="placeholder">Confirm password</label>
+                <label for="confirm" class="placeholder">Confirm password</label>
             </div>
 
             <button type="text" class="submit" id="submit">Sign Up</button>
+            <button type="text" class="submit" id="signIn"><a href="#login"> You already have an account?</a></button>
+
         </main>
 
         <main class="page404">

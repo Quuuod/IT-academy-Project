@@ -1,33 +1,28 @@
-.loginContainer {
-    font-family: sans-serif;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-bottom: 1.5em;
-    border: 3px solid white;
-    padding: 0.6em;
-    border-radius: 4px;
-    background: #08d;
-    color: #231F20;
-    font-family: "Trebuchet MS", "Lucida Sans";
-}
 
 .account,
 .new,
 .login {
     border: 5px solid rgb(0, 90, 146);
     border-top: 5px solid rgb(0, 90, 146);
-    border-bottom: 3px solid rgb(0, 90, 146);
+    border-bottom: 5px solid rgb(0, 90, 146);
     border-collapse: collapse;
     margin: auto;
-    margin-top: 125px;
+    margin-top: 7em;
     margin-bottom: 50px;
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
     height: auto;
     padding: 20px;
-    width: 70vw;
+    width: 40vw;
+}
+
+@media(max-width: 1000px) {
+    .account,
+    .new,
+    .login {
+        width: 70vw;
+    }
 }
 
 .title {
@@ -160,4 +155,10 @@
 
 .submit:active {
     background-color: #06b;
+}
+
+.login a,
+.new a{
+    text-decoration: none;
+    color: #eee;
 }

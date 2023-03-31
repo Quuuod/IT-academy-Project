@@ -1,15 +1,18 @@
 const main = document.querySelector(".mainPage")
 const contacts = document.querySelector(".contactPage")
 const team = document.querySelector(".teamPage")
+const fashion = document.querySelector(".fashionPage")
 const login = document.querySelector(".login")
 const newUser = document.querySelector(".new")
 const account = document.querySelector(".account")
 const page404 = document.querySelector(".page404")
+const header = document.querySelector("header")
 
 const hideAll = () => {
     main.classList.add('hidden');
     contacts.classList.add('hidden');
     team.classList.add('hidden');
+    fashion.classList.add('hidden');
     account.classList.add('hidden');
     login.classList.add('hidden');
     newUser.classList.add('hidden');
@@ -18,6 +21,8 @@ const hideAll = () => {
 
 const onLocationChange = () => {
     hideAll();
+    header.classList.remove("hidden")
+
     try {
         switch (location.hash) {
             case "#main":
@@ -35,9 +40,12 @@ const onLocationChange = () => {
             case "#new":
                 newUser.classList.remove('hidden');
                 break;
-                case "#account":
-                    account.classList.remove('hidden');
-                    break;
+            case "#account":
+                account.classList.remove('hidden');
+                break;
+            case "#fashion":
+                fashion.classList.remove('hidden');
+                break;
             case "":
                 main.classList.remove('hidden');
                 break;
@@ -45,6 +53,7 @@ const onLocationChange = () => {
             default:
                 hideAll();
                 page404.classList.remove('hidden');
+                header.classList.add("hidden")
                 break;
                 //   case "#notes":
                 //     if (checkLogin()) {

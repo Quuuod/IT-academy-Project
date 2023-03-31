@@ -1,22 +1,25 @@
-.account{
-    margin-top: 150px;
+.account {
+    margin-top: 7em;
 }
-.avatar{
+
+.avatar {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 }
-.avatar img{
-width: 100px;
-border-radius: 100%;
-height: 100px;
-overflow: hidden;
-background: url("https://flomaster.club/uploads/posts/2022-07/1657359817_39-flomaster-club-p-kot-siluet-risunok-krasivo-39.jpg");
-background-size: contain;
+
+.avatar img {
+    width: 100px;
+    border-radius: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: url("https://flomaster.club/uploads/posts/2022-07/1657359817_39-flomaster-club-p-kot-siluet-risunok-krasivo-39.jpg");
+    background-size: contain;
+    background-position: center;
 }
 
-.account p{
+.account p {
     display: flex;
     align-items: center;
 }
