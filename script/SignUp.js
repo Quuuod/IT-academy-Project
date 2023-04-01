@@ -5,12 +5,12 @@ const password = signUp.querySelector("#password")
 const confirmPassword = signUp.querySelector("#confirm")
 
 const createUser = signUp.querySelector("#submit")
+const signInRedir = signUp.querySelector("#signIn")
 
-const fetchWithLog = (...args) =>
-    fetch(...args).then((res) => res.json()).then(console.log);
+signInRedir.addEventListener('click', e => location.hash = "login")
 
 createUser.addEventListener('click', e => {
-    let logins = [];
+    const logins = [];
     (async () => {
         await fetch("https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user")
             .then((res) => {
@@ -26,25 +26,32 @@ createUser.addEventListener('click', e => {
             if (password.value === confirmPassword.value) {
                 if (logins.every(item => item !== username.value)) {
 
-                    fetchWithLog('https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user', {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            login: username.value,
-                            password: password.value,
-                        })
-                    });
-                    username.value = ''
-                    password.value = ''
-                    confirmPassword.value = ''
-                    alert('Created')
+                    fetch('https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user', {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                login: username.value,
+                                password: password.value,
+                            })
+                        }).then((res) => res.json())
+                        .then((res) => {
+                            username.value = ''
+                            password.value = ''
+                            confirmPassword.value = ''
+                            localStorage.setItem('UserID', res.id)
+                            alert('Created')
+                            location.hash = 'main'
+                        });
+
+
                 } else {
                     alert('User already exist')
                 }
             } else {
                 alert('Passwords does not match')
+                confirmPassword.value = ''
             }
         } else {
             alert('Complete the required fields')

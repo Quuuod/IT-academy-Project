@@ -4,8 +4,9 @@ const body = document.body;
 const navbar = document.querySelector(".navbar")
 const shadow = document.querySelector(".shadow")
 const logo = document.querySelector(".logo")
+const menuMobile = document.querySelector("#menu")
 // Клонируем меню, чтобы задать свои стили для мобильной версии
-const menu = document.querySelector("#menu").cloneNode(1);
+const menu = menuMobile.cloneNode(1);
 
 // При клике на иконку hamb вызываем ф-ию hambHandler
 hamb.addEventListener("click", hambHandler);
@@ -25,6 +26,7 @@ function hambHandler(e) {
 
 // Здесь мы рендерим элементы в наш попап
 function renderPopup() {
+  menu.id = 'menuMobile'
   popup.appendChild(menu);
 }
 
@@ -45,4 +47,43 @@ function closeOnClick() {
   shadow.classList.add('hiddenShadow')
   navbar.classList.remove('opened')
   logo.classList.remove("hidden")
+}
+
+
+const logoutBtnMobile = menu.querySelector("#logout")
+
+const signInBtnMobile = menu.querySelector("#signIn")
+const signUpBtnMobile = menu.querySelector("#signUp")
+const fashionBtnMobile = menu.querySelector("#fashion")
+const accountBtnMobile = menu.querySelector("#account")
+const fashionBigBtnMobile = menu.querySelector("#goFashion")
+
+logoutBtnMobile.addEventListener('click', e=>{
+    localStorage.removeItem('UserID')
+    onLocationChange()
+})
+
+const checkUserMobile = () =>{
+    if(localStorage.UserID){
+        signInBtnMobile.classList.add("hidden")
+        signUpBtnMobile.classList.add("hidden")
+
+        accountBtnMobile.classList.remove("hidden")
+        fashionBtnMobile.classList.remove("hidden")
+        accountBtnMobile.classList.remove("hidden")
+        logoutBtnMobile.classList.remove("hidden")
+
+        fashionBigBtn.href ="#fashion"
+
+    } else{
+        signInBtnMobile.classList.remove("hidden")
+        signUpBtnMobile.classList.remove("hidden")
+
+        accountBtnMobile.classList.add("hidden")
+        fashionBtnMobile.classList.add("hidden")
+        accountBtnMobile.classList.add("hidden")
+        logoutBtnMobile.classList.add("hidden")
+
+        fashionBigBtn.href ="#login"
+    }
 }

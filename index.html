@@ -27,6 +27,7 @@
     <script src="./script/newAvatar.js" defer></script>
     <script src="./script/copyContact.js" defer></script>
     <script src="./script/SignUp.js" defer></script>
+    <script src="./script/SignIn.js" defer></script>
 </head>
 
 <body>
@@ -44,13 +45,13 @@
                         </div>
                         <ul class="menu" id="menu">
                             <li><a href="#main">Home</a></li>
-                            <li><a href="#fashion">Fashion</a></li>
-                            <li><a href="#account">Account</a></li>
-                            <li><a href="#login">Sign In</a></li>
-                            <li><a href="#new">Sign Up</a></li>
+                            <li><a href="#fashion" id="fashion">Fashion</a></li>
+                            <li><a href="#account" id="account">Account</a></li>
+                            <li><a href="#login" id="signIn">Sign In</a></li>
+                            <li><a href="#new" id="signUp">Sign Up</a></li>
                             <li><a href="#" id="logout">Logout</a></li>
                         </ul>
-                        <a href="#fashion" class="logo" id="logo"><img
+                        <a href="#main" class="logo" id="logo"><img
                                 src="../IT-academy-Project/images/free-icon-cat-2500354.png" alt=""></a>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
         <main class="mainPage">
             <article>
                 <section class="bigImage">
-                    <a class="bigImageText" href="#fashion">Go Fashion</a>
+                    <a class="bigImageText" href="#fashion" id="goFashion">Go Fashion</a>
                 </section>
 
                 <section class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true">
@@ -147,7 +148,7 @@
                         <img src="./images/team/Persei.jpg" alt="Avatar" style="width:100%">
                         <div class="container">
                             <h4><b>Persei</b></h4>
-                            <p>System/Network administrator</p>
+                            <p>System administrator</p>
                         </div>
                     </div>
 
@@ -183,8 +184,8 @@
                 <section class="contacts">
                     <div>
                         <p>Contact Us</p>
-                        <p>Number: <span id = "contactNumber">+375-29-208-71-56</span></p>
-                        <p>Mail: <span id = "contactEmail">prizraklogan@gmail.com</span></p>
+                        <p>Number: <span id="contactNumber">+375-29-208-71-56</span></p>
+                        <p>Mail: <span id="contactEmail">prizraklogan@gmail.com</span></p>
                     </div>
                 </section>
             </article>
@@ -199,27 +200,33 @@
             <div class="title">Your Account</div>
 
             <div class="input-container ic1 avatar" id="loginIdContainer">
-                <label for="newAvatar"><img id="avatar"
-                        src="https://www.purina.ru/sites/default/files/2021-02/kot-ili-koshka-2.jpg" /></label>
+                <label for="newAvatar"><img id="avatar" /></label>
 
             </div>
-            <div class="input-container ic1 newAvatar hidden" id="loginIdContainer">
+            <div class="input-container ic1 newAvatar hidden" id="accountAvatarContainer">
                 <input id="newAvatar" class="input" type="text" placeholder=" " />
                 <div class="cut cut-short"></div>
                 <label for="newAvatar" class="placeholder">Enter URL for new profile picture</label>
             </div>
 
-            <div class="input-container ic1" id="loginIdContainer">
-                <p id="loginId" class="input" type="text" placeholder=" ">QWE</p>
+            <div class="input-container ic1" id="accountLoginContainer">
+                <p id="loginId" class="input" type="text" placeholder=" "></p>
                 <div class="cut cut-short"></div>
                 <label for="loginId" class="placeholder">Login</label>
             </div>
 
-            <div class="input-container ic2">
-                <p id="passwordId" class="input" type="text" placeholder=" ">213123</p>
+            <div class="input-container ic2" id="accountPasswordContainer">
+                <input id="accPassword" class="input" type="text" placeholder=""></input>
                 <div class="cut cut-short"></div>
-                <label for="passwordId" class="placeholder">Password</label>
+                <label for="accPassword" class="placeholder">Enter old password to change it</label>
             </div>
+
+            <div class="input-container ic2" id="newPasswordContainer">
+                <input id="newPassword" class="input" type="text" placeholder=""></input>
+                <div class="cut cut-short"></div>
+                <label for="newPassword" class="placeholder">Enter new password</label>
+            </div>
+            <button type="text" class="submit hidden" id="changePassword">Change password</button>
 
         </main>
 
@@ -238,7 +245,7 @@
                 <label for="passwordId" class="placeholder">Password</label>
             </div>
             <button type="text" class="submit" id="loginSubmit">Sign in</button>
-            <button type="text" class="submit" id="signUp"><a href="#new">Dont have an account yet?</a></button>
+            <button type="text" class="submit" id="signUp">Dont have an account yet?</button>
         </main>
 
         <main class="new">
@@ -263,7 +270,7 @@
             </div>
 
             <button type="text" class="submit" id="submit">Sign Up</button>
-            <button type="text" class="submit" id="signIn"><a href="#login"> You already have an account?</a></button>
+            <button type="text" class="submit" id="signIn"> You already have an account?</button>
 
         </main>
 

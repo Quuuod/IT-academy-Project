@@ -1,3 +1,4 @@
+//страницы
 const main = document.querySelector(".mainPage")
 const contacts = document.querySelector(".contactPage")
 const team = document.querySelector(".teamPage")
@@ -7,6 +8,19 @@ const newUser = document.querySelector(".new")
 const account = document.querySelector(".account")
 const page404 = document.querySelector(".page404")
 const header = document.querySelector("header")
+//кнопки
+const logoutBtn = document.querySelector("#logout")
+
+const signInBtn = document.querySelector("#signIn")
+const signUpBtn = document.querySelector("#signUp")
+const fashionBtn = document.querySelector("#fashion")
+const accountBtn = document.querySelector("#account")
+const fashionBigBtn = document.querySelector("#goFashion")
+
+logoutBtn.addEventListener('click', e=>{
+    localStorage.removeItem('UserID')
+    onLocationChange()
+})
 
 const hideAll = () => {
     main.classList.add('hidden');
@@ -19,10 +33,36 @@ const hideAll = () => {
     page404.classList.add('hidden');
 }
 
-const onLocationChange = () => {
-    hideAll();
-    header.classList.remove("hidden")
+const checkUser = () =>{
+    if(localStorage.UserID){
+        signInBtn.classList.add("hidden")
+        signUpBtn.classList.add("hidden")
 
+        accountBtn.classList.remove("hidden")
+        fashionBtn.classList.remove("hidden")
+        accountBtn.classList.remove("hidden")
+        logoutBtn.classList.remove("hidden")
+
+        fashionBigBtn.href ="#fashion"
+
+    } else{
+        signInBtn.classList.remove("hidden")
+        signUpBtn.classList.remove("hidden")
+
+        accountBtn.classList.add("hidden")
+        fashionBtn.classList.add("hidden")
+        accountBtn.classList.add("hidden")
+        logoutBtn.classList.add("hidden")
+
+        fashionBigBtn.href ="#login"
+    }
+}
+
+const onLocationChange = () => {
+    hideAll()
+    checkUser()
+    checkUserMobile()
+    header.classList.remove("hidden")
     try {
         switch (location.hash) {
             case "#main":
@@ -35,15 +75,27 @@ const onLocationChange = () => {
                 team.classList.remove('hidden');
                 break;
             case "#login":
+                if(localStorage.UserID){
+                    location.hash = 'main'
+                }
                 login.classList.remove('hidden');
                 break;
             case "#new":
+                if(localStorage.UserID){
+                    location.hash = 'main'
+                }
                 newUser.classList.remove('hidden');
                 break;
             case "#account":
+                if(!localStorage.UserID){
+                    location.hash = 'login'
+                }
                 account.classList.remove('hidden');
                 break;
             case "#fashion":
+                if(!localStorage.UserID){
+                    location.hash = 'login'
+                }
                 fashion.classList.remove('hidden');
                 break;
             case "":
@@ -55,22 +107,6 @@ const onLocationChange = () => {
                 page404.classList.remove('hidden');
                 header.classList.add("hidden")
                 break;
-                //   case "#notes":
-                //     if (checkLogin()) {
-                //       notesPage.hidden = false
-                //     } else {
-                //       alert('you must log in ')
-                //       location.hash = '#login'
-                //     }
-                //     break;
-                //   case '':
-                //     location.hash = "#list"
-                //     break;
-                //   default:
-                //     hideAll();
-                //     page404.hidden = false
-                //     break;
-                // }
         }
     } catch {
         throw err;
