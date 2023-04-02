@@ -40,6 +40,7 @@ loginSubmit.addEventListener('click', e => {
                     loginInput.value = ''
                     passwordInput.value = ''
                     alert('Signed in')
+                    getHeaderAvatar()
                     location.hash = 'main'
                 } else {
                     alert('Incorrect password')

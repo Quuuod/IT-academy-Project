@@ -17,9 +17,10 @@ const fashionBtn = document.querySelector("#fashion")
 const accountBtn = document.querySelector("#account")
 const fashionBigBtn = document.querySelector("#goFashion")
 
-logoutBtn.addEventListener('click', e=>{
+logoutBtn.addEventListener('click', e => {
     localStorage.removeItem('UserID')
     onLocationChange()
+    getHeaderAvatar()
 })
 
 const hideAll = () => {
@@ -33,8 +34,8 @@ const hideAll = () => {
     page404.classList.add('hidden');
 }
 
-const checkUser = () =>{
-    if(localStorage.UserID){
+const checkUser = () => {
+    if (localStorage.UserID) {
         signInBtn.classList.add("hidden")
         signUpBtn.classList.add("hidden")
 
@@ -43,9 +44,9 @@ const checkUser = () =>{
         accountBtn.classList.remove("hidden")
         logoutBtn.classList.remove("hidden")
 
-        fashionBigBtn.href ="#fashion"
+        fashionBigBtn.href = "#fashion"
 
-    } else{
+    } else {
         signInBtn.classList.remove("hidden")
         signUpBtn.classList.remove("hidden")
 
@@ -54,7 +55,7 @@ const checkUser = () =>{
         accountBtn.classList.add("hidden")
         logoutBtn.classList.add("hidden")
 
-        fashionBigBtn.href ="#login"
+        fashionBigBtn.href = "#login"
     }
 }
 
@@ -68,36 +69,48 @@ const onLocationChange = () => {
             case "#main":
                 main.classList.remove('hidden');
                 break;
+
             case "#contacts":
                 contacts.classList.remove('hidden');
                 break;
+
             case "#team":
                 team.classList.remove('hidden');
                 break;
+
             case "#login":
-                if(localStorage.UserID){
+                if (localStorage.UserID) {
                     location.hash = 'main'
+                } else {
+                    login.classList.remove('hidden');
                 }
-                login.classList.remove('hidden');
                 break;
+
             case "#new":
-                if(localStorage.UserID){
+                if (localStorage.UserID) {
                     location.hash = 'main'
+                } else {
+                    newUser.classList.remove('hidden');
                 }
-                newUser.classList.remove('hidden');
                 break;
+
             case "#account":
-                if(!localStorage.UserID){
+                if (!localStorage.UserID) {
                     location.hash = 'login'
+                } else {
+                    getUser()
+                    account.classList.remove('hidden');
                 }
-                account.classList.remove('hidden');
                 break;
+
             case "#fashion":
-                if(!localStorage.UserID){
+                if (!localStorage.UserID) {
                     location.hash = 'login'
+                } else {
+                    fashion.classList.remove('hidden');
                 }
-                fashion.classList.remove('hidden');
                 break;
+
             case "":
                 main.classList.remove('hidden');
                 break;

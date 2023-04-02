@@ -3,7 +3,9 @@ const popup = document.querySelector("#popup");
 const body = document.body;
 const navbar = document.querySelector(".navbar")
 const shadow = document.querySelector(".shadow")
-const logo = document.querySelector(".logo")
+const userAvatar = document.querySelector(".logo")
+const logo = document.querySelector("#logo")
+
 const menuMobile = document.querySelector("#menu")
 // Клонируем меню, чтобы задать свои стили для мобильной версии
 const menu = menuMobile.cloneNode(1);
@@ -20,6 +22,7 @@ function hambHandler(e) {
   body.classList.toggle("noscroll");
   navbar.classList.toggle("opened")
   shadow.classList.toggle("hiddenShadow")
+  userAvatar.classList.toggle("hidden")
   logo.classList.toggle("hidden")
   renderPopup();
 }
@@ -46,6 +49,7 @@ function closeOnClick() {
   body.classList.remove("noscroll");
   shadow.classList.add('hiddenShadow')
   navbar.classList.remove('opened')
+  userAvatar.classList.remove("hidden")
   logo.classList.remove("hidden")
 }
 
@@ -60,6 +64,7 @@ const fashionBigBtnMobile = menu.querySelector("#goFashion")
 
 logoutBtnMobile.addEventListener('click', e=>{
     localStorage.removeItem('UserID')
+    getHeaderAvatar()
     onLocationChange()
 })
 

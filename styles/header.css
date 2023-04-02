@@ -107,6 +107,21 @@ header .menu > li > a {
 #logout{
   cursor: pointer;
 }
+.headerImages{
+  display: flex;
+  justify-content: space-around;
+  margin-right: 5vw;
+  width: 25vw;
+}
+.headerImages a{
+  margin: 5px;
+}
+#headerAvatar img{
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+    overflow: hidden;
+}
 
 @media (max-width: 1000px) {
     .navbar__wrap .menu {

@@ -34,6 +34,7 @@ createUser.addEventListener('click', e => {
                             body: JSON.stringify({
                                 login: username.value,
                                 password: password.value,
+                                avatarUrl : 'https://flomaster.club/uploads/posts/2022-07/1657359817_39-flomaster-club-p-kot-siluet-risunok-krasivo-39.jpg'
                             })
                         }).then((res) => res.json())
                         .then((res) => {
@@ -42,6 +43,7 @@ createUser.addEventListener('click', e => {
                             confirmPassword.value = ''
                             localStorage.setItem('UserID', res.id)
                             alert('Created')
+                            getHeaderAvatar()
                             location.hash = 'main'
                         });
 
