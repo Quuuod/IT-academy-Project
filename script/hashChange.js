@@ -107,6 +107,7 @@ const onLocationChange = () => {
                 if (!localStorage.UserID) {
                     location.hash = 'login'
                 } else {
+                    CheckPrivilegies()
                     fashion.classList.remove('hidden');
                 }
                 break;

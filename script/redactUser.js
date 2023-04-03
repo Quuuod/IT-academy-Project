@@ -8,10 +8,15 @@ const accPassword = document.querySelector('#accPassword')
 const newPassword = document.querySelector('#newPassword')
 const changePasswordBtn = document.querySelector('#changePassword');
 
-function newAvatarFunc() {
+async function newAvatarFunc() {
     newAvatarContainer.classList.add('hidden')
     if (newAvatar.value.trim() !== '') {
-        fetch("https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user/" + localStorage.UserID, {
+        await fetch(newAvatar.value, {
+            method: 'HEAD',
+            mode: 'no-cors'
+        })
+        .then(function () {
+            fetch("https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user/" + localStorage.UserID, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -27,6 +32,10 @@ function newAvatarFunc() {
                 alert('Avatar changed!')
                 getHeaderAvatar()
             });
+        })
+        .catch(function () {
+            alert('URL is not valid');
+        });
     } else if (newAvatar.value.trim() !== '') {
         alert('You didnt insert the link')
     }

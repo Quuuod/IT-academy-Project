@@ -111,7 +111,7 @@ header .menu > li > a {
   display: flex;
   justify-content: space-around;
   margin-right: 5vw;
-  width: 25vw;
+
 }
 .headerImages a{
   margin: 5px;

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./styles/hidden.css">
     <link rel="stylesheet" href="./styles/404.css">
     <link rel="stylesheet" href="./styles/account.css">
+    <link rel="stylesheet" href="./styles/products.css">
     <!-- JavaScript -->
     <script src="./script/slider/itc-slider.js" defer></script>
     <script src="./script/headerAvatar.js" defer></script>
@@ -28,7 +29,7 @@
     <script src="./script/copyContact.js" defer></script>
     <script src="./script/SignUp.js" defer></script>
     <script src="./script/SignIn.js" defer></script>
-
+    <script src="./script/productAdder.js" defer></script>
     <script src="./script/hashChange.js" defer></script>
 
 </head>
@@ -200,7 +201,10 @@
         </main>
 
         <main class="fashionPage">
-            <section></section>
+            <section id = "admin">
+            </section>
+
+
         </main>
 
 
@@ -212,7 +216,7 @@
 
             </div>
             <div class="input-container ic1 newAvatar hidden" id="accountAvatarContainer">
-                <input id="newAvatar" class="input" type="text" placeholder=" " />
+                <input id="newAvatar" class="input" type="url" placeholder=" " />
                 <div class="cut cut-short"></div>
                 <label for="newAvatar" class="placeholder">Enter URL for new profile picture</label>
             </div>
@@ -224,13 +228,13 @@
             </div>
 
             <div class="input-container ic2" id="accountPasswordContainer">
-                <input id="accPassword" class="input" type="text" placeholder=""></input>
+                <input id="accPassword" class="input" type="password" placeholder=""></input>
                 <div class="cut cut-short"></div>
                 <label for="accPassword" class="placeholder">Enter old password to change it</label>
             </div>
 
             <div class="input-container ic2" id="newPasswordContainer">
-                <input id="newPassword" class="input" type="text" placeholder=""></input>
+                <input id="newPassword" class="input" type="password" placeholder=""></input>
                 <div class="cut cut-short"></div>
                 <label for="newPassword" class="placeholder">Enter new password</label>
             </div>
@@ -248,7 +252,7 @@
             </div>
 
             <div class="input-container ic2">
-                <input id="passwordId" class="input" type="text" placeholder=" " />
+                <input id="passwordId" class="input" type="password" placeholder=" " />
                 <div class="cut cut-short"></div>
                 <label for="passwordId" class="placeholder">Password</label>
             </div>
@@ -266,13 +270,13 @@
             </div>
 
             <div class="input-container ic2">
-                <input id="password" class="input" type="text" placeholder=" " />
+                <input id="password" class="input" type="password" placeholder=" " />
                 <div class="cut"></div>
                 <label for="password" class="placeholder">Create a password</label>
             </div>
 
             <div class="input-container ic2">
-                <input id="confirm" class="input" type="text" placeholder=" " />
+                <input id="confirm" class="input" type="password" placeholder=" " />
                 <div class="cut cut-short"></div>
                 <label for="confirm" class="placeholder">Confirm password</label>
             </div>
