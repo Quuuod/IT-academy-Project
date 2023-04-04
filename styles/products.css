@@ -1,5 +1,117 @@
-@media screen and (max-width: 800px){
-    #admin{
+.product {
+    position: relative;
+    border: 5px solid rgb(0, 90, 146);
+    border-top: 5px solid rgb(0, 90, 146);
+    border-bottom: 5px solid rgb(0, 90, 146);
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 7em;
+    margin-bottom: 50px;
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: auto;
+    padding: 35px;
+    width: 90vw;
+    height: 77vh;
+}
+
+.product p {
+    margin-top: 0;
+    width: 40vw;
+    height: 7vh;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.productContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.productText {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+.productImageContainer {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.productImage {
+    will-change: transform;
+    transform-origin: center center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.productImage:hover {
+    object-fit: contain;
+}
+
+
+
+.deleteProduct {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.productBasketContainer {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.productLikeContainer {
+    position: absolute;
+    top: 5px;
+    left: 50px;
+}
+
+.deleteImg path,
+.productLikeImage path,
+.productBasketImage path {
+    fill: #fff;
+    width: 4vw;
+}
+
+.productBasketContainer:hover .productBasketImage path {
+    fill: #00ff22;
+}
+.deleteProduct:hover .deleteImg path {
+    fill: #ff0000;
+}
+.productLikeContainer:hover .productLikeImage path {
+    fill: #ff00aa;
+}
+
+.likeActive path{
+    fill: #ff00aa !important;
+}
+
+.likeActive:hover path{
+    fill: #ff0000 !important;
+}
+
+
+@media screen and (max-width: 800px) {
+    #admin {
         width: 70vw;
     }
 }

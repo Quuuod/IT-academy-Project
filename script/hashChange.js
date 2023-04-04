@@ -21,6 +21,7 @@ logoutBtn.addEventListener('click', e => {
     localStorage.removeItem('UserID')
     onLocationChange()
     getHeaderAvatar()
+    localStorage.removeItem('Admin')
 })
 
 const hideAll = () => {
@@ -108,6 +109,7 @@ const onLocationChange = () => {
                     location.hash = 'login'
                 } else {
                     CheckPrivilegies()
+                    getAllProducts()
                     fashion.classList.remove('hidden');
                 }
                 break;

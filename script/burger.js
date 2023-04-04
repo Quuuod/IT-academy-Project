@@ -66,6 +66,7 @@ logoutBtnMobile.addEventListener('click', e=>{
     localStorage.removeItem('UserID')
     getHeaderAvatar()
     onLocationChange()
+    localStorage.removeItem('Admin')
 })
 
 const checkUserMobile = () =>{

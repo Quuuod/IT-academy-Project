@@ -13,6 +13,8 @@ async function CheckPrivilegies() {
             adminPanel.innerHTML = ''
             if (res.isUserAdmin === true) {
 
+                localStorage.setItem('Admin', true)
+
                 adminPanel.classList.remove('hidden')
 
                 adminPanel.innerHTML =
@@ -23,7 +25,6 @@ async function CheckPrivilegies() {
                 <input id="inputImage" class="input" type="url" placeholder=" ">
                 <div class="cut cut-short"></div>
                 <label for="inputImage" class="placeholder">Image URL</label>
-
                 </div>
 
                 <div class="input-container ic1">
@@ -71,6 +72,7 @@ async function CheckPrivilegies() {
                                     return res.json()
                                 }).then(res =>{
                                     alert('Created')
+                                    getAllProducts()
                                 })
                             })
                             .catch(function () {

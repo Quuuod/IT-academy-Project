@@ -3,16 +3,17 @@
 }
 
 .avatar {
+    margin-top: 60px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 .avatar img {
-    width: 100px;
+    width: 4em;
+    height: 4em;
     border-radius: 100%;
-    height: 100px;
     overflow: hidden;
     background-size: contain;
     background-position: center;
