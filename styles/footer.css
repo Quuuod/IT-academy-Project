@@ -44,6 +44,7 @@ footer .menu li a {
     text-decoration: none;
     /*ссылка без подчеркивания*/
     display: inline-block;
+    transition: opacity 1s ease-out 1s
 }
 
 footer .menu li a:hover {

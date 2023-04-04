@@ -11,7 +11,7 @@
     border-radius: 20px;
     box-sizing: border-box;
     height: auto;
-    padding: 35px;
+    padding: 1.7em;
     width: 90vw;
     height: 77vh;
 }
@@ -81,12 +81,17 @@
     top: 5px;
     left: 50px;
 }
-
+.productBasketImage{
+    width: 1.4em;
+}
+.deleteImg,
+.productLikeImage{
+    width: 1.8em;
+}
 .deleteImg path,
 .productLikeImage path,
 .productBasketImage path {
     fill: #fff;
-    width: 4vw;
 }
 
 .productBasketContainer:hover .productBasketImage path {
@@ -107,9 +112,67 @@
     fill: #ff0000 !important;
 }
 
+.productSort{
+        color: white;
+    position: relative;
+    border: 3px solid rgb(0, 90, 146);
+    border-top: 3px solid rgb(0, 90, 146);
+    border-bottom: 3px solid rgb(0, 90, 146);
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 7em;
+    margin-bottom: 50px;
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: auto;
+    padding: 5px;
+    width: 90vw;
+    height: 77vh;
+}
+
+#sort{
+    height: 7vh;
+}
+
+#sort p{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    z-index: 5;
+}
+#sort span{
+        position: relative;
+
+    z-index: 4;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination.pagination-lg .page-link {
+    padding: 10px;
+}
 
 @media screen and (max-width: 800px) {
     #admin {
         width: 70vw;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .productSort{
+        padding: 4px 5px 0;
+        font-size: 2.5vh;
+    }
+    .productImage:hover {
+        object-fit: cover;
     }
 }

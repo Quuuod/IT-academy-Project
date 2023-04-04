@@ -41,10 +41,28 @@ const cross = `M25.7074 24.2926C25.8004 24.3855 25.8741 24.4958 25.9243 24.6172C
 
 const productsContainer = document.querySelector("#productsContainer")
 
+const url = 'https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/product'
+
+const sort = document.querySelectorAll('#sort span')
+
+const queryParams = {
+    sortBy: 'date',
+    asc: false,
+}
+
+
+const generateQuery = () => {
+    const {
+        sortBy,
+    } = queryParams
+    const order = queryParams.asc ? 'asc' : 'desc'
+    return `?&orderBy=${sortBy},${order}`
+}
+
 async function getAllProducts() {
     productsContainer.innerHTML = ''
     if (localStorage.UserID) {
-        await fetch('https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/product?orderBy=date,desc')
+        await fetch(url + generateQuery())
             .then(res => {
                 return res.json()
             }).then(res => {
@@ -56,7 +74,7 @@ async function getAllProducts() {
                     productSection.innerHTML =
                         `
                 <div class = "productBasketContainer" data-id = ${product.id}>
-                <svg class = "productBasketImage" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class = "productBasketImage" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="${basket}" fill="black"/>
                 </svg>
                 </div>
@@ -70,7 +88,7 @@ async function getAllProducts() {
                 <img id = "productImage" class="productImage" src ="${product.imageUrl}">
                 </div>
                 <div class = "productLikeContainer" data-id = ${product.id}>
-                <svg class = "productLikeImage" data-id = ${product.id} width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class = "productLikeImage" data-id = ${product.id}  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="${like}" fill="black"/>
                 </svg>
                 </div>
@@ -80,7 +98,7 @@ async function getAllProducts() {
                         deleteBtn.classList.add('deleteProduct')
                         deleteBtn.innerHTML =
                             `
-                    <svg class = 'deleteImg' width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class = 'deleteImg' viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="${cross}" fill="black"/>
                     </svg>
                     `
@@ -184,3 +202,22 @@ async function getAllProducts() {
     }
 }
 
+sort.forEach(element => {
+    element.addEventListener('click', e => {
+        console.log(element.innerText,queryParams.sortBy)
+        if (element.innerText === queryParams.sortBy) {
+            if (queryParams.asc === 'asc') {
+                console.log('asc')
+            } else if (queryParams.asc === 'desc') {
+                console.log('desc')
+            }
+        }
+
+        if (e.target.dataset.field) {
+            queryParams.asc = e.target.dataset.field === queryParams.sortBy ? !queryParams.asc : true
+            queryParams.page = 0
+            queryParams.sortBy = e.target.dataset.field
+            getAllProducts()
+        }
+    })
+})
