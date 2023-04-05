@@ -2,6 +2,9 @@
     width: 100%;
     height: 100%;
     background-color: #15172b;
+    background-image: url("../images/1524894236159939344.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
     position: fixed;
     top: 0;
     z-index: 100;
