@@ -60,7 +60,9 @@ const generateQuery = () => {
 }
 
 async function getAllProducts() {
-    productsContainer.innerHTML = ''
+    try {
+        createLoader ()
+            productsContainer.innerHTML = ''
     if (localStorage.UserID) {
         await fetch(url + generateQuery())
             .then(res => {
@@ -70,7 +72,6 @@ async function getAllProducts() {
                     const productSection = document.createElement("section")
                     productSection.classList.add("product")
                     productsContainer.append(productSection)
-
                     productSection.innerHTML =
                         `
                 <div class = "productBasketContainer" data-id = ${product.id}>
@@ -133,7 +134,6 @@ async function getAllProducts() {
                                     })
                                 })
                             })
-
                     })
                 })
 
@@ -193,31 +193,37 @@ async function getAllProducts() {
                                     element.children[0].classList.add('likeActive')
                                 })
                         }
-
-
                     })
                 })
 
             })
     }
+    } catch (error) {
+        throw(error)
+    } finally{
+        loaderWait()
+    }
+
 }
 
 sort.forEach(element => {
     element.addEventListener('click', e => {
-        console.log(element.innerText,queryParams.sortBy)
-        if (element.innerText === queryParams.sortBy) {
-            if (queryParams.asc === 'asc') {
-                console.log('asc')
-            } else if (queryParams.asc === 'desc') {
-                console.log('desc')
-            }
+        sort.forEach(el =>{
+            if (el.innerText.includes('⏷') || el.innerText.includes('⏶')) {
+                el.innerText = el.innerText.slice(0, el.innerText.length - 1);
         }
-
+        })  
+        
+        
         if (e.target.dataset.field) {
-            queryParams.asc = e.target.dataset.field === queryParams.sortBy ? !queryParams.asc : true
-            queryParams.page = 0
+            queryParams.asc = e.target.dataset.field === queryParams.sortBy ? !queryParams.asc : false
             queryParams.sortBy = e.target.dataset.field
             getAllProducts()
+        }
+if (queryParams.asc === false) {
+            element.innerText = element.innerText + "⏶"
+        } else if (queryParams.asc === true) {
+            element.innerText = element.innerText + "⏷"
         }
     })
 })

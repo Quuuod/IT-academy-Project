@@ -146,7 +146,7 @@
 }
 #sort span{
         position: relative;
-
+    cursor: pointer;
     z-index: 4;
 
 }

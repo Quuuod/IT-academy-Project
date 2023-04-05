@@ -1,11 +1,11 @@
 const adminPanel = document.querySelector("#admin")
 
 async function CheckPrivilegies() {
-
+try {
+    createLoader ()
     adminPanel.classList.add('hidden')
 
-    if (localStorage.UserID)
-        await fetch("https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user/" + localStorage.UserID)
+    if (localStorage.UserID){await fetch("https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user/" + localStorage.UserID)
         .then(res => {
             return res.json()
         })
@@ -34,7 +34,7 @@ async function CheckPrivilegies() {
                 </div>
 
                 <div class="input-container ic1">
-                <input id="inputPrice" class="input" type="number" placeholder=" ">
+                <input id="inputPrice" class="input" type="number" min="1" placeholder=" ">
                 <div class="cut cut-short"></div>
                 <label for="inputPrice" class="placeholder">Product price</label>
                 </div>
@@ -81,33 +81,16 @@ async function CheckPrivilegies() {
                     } else {
                         alert('Fill all fields')
                     }
-
-
                 })
 
             }
         })
+    }
+} catch (error) {
+    throw(error)
+} finally{
+    loaderWait()
+}
+    
 }
 
-
-{
-    /* <div class="title">Add new product</div>
-
-    <div class="input-container ic1">
-        <input id="input1" class="input" type="url" placeholder=" " />
-        <div class="cut cut-short"></div>
-        <label for="input1" class="placeholder">Image URL</label>
-    </div>
-
-    <div class="input-container ic1">
-        <input id="input2" class="input" type="text" placeholder=" " />
-        <div class="cut cut-short"></div>
-        <label for="input2" class="placeholder">Product name</label>
-    </div>
-
-    <div class="input-container ic1">
-        <input id="input3" class="input" type="number" placeholder=" " />
-        <div class="cut cut-short"></div>
-        <label for="input3" class="placeholder">Product price</label>
-    </div> */
-}

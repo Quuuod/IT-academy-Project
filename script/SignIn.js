@@ -9,7 +9,9 @@ const signUpRedir = loginPage.querySelector("#signUp")
 signUpRedir.addEventListener('click', e => location.hash = "new")
 
 loginSubmit.addEventListener('click', e => {
-    const users = [];
+    try {
+        createLoader ()
+        const users = [];
     (async () => {
         await fetch("https://it-academy-js-api-zmicerboksha.vercel.app/api/6/rm/user")
             .then(res => {
@@ -52,4 +54,10 @@ loginSubmit.addEventListener('click', e => {
         }
     })()
 
+    } catch (error) {
+        throw(error)
+    } finally{
+        loaderWait()
+    }
+    
 })

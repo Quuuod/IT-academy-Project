@@ -5,9 +5,11 @@ const team = document.querySelector(".teamPage")
 const fashion = document.querySelector(".fashionPage")
 const login = document.querySelector(".login")
 const newUser = document.querySelector(".new")
+const userProducts = document.querySelector(".userProducts")
 const account = document.querySelector(".account")
 const page404 = document.querySelector(".page404")
 const header = document.querySelector("header")
+const footer = document.querySelector("footer")
 //кнопки
 const logoutBtn = document.querySelector("#logout")
 
@@ -16,6 +18,7 @@ const signUpBtn = document.querySelector("#signUp")
 const fashionBtn = document.querySelector("#fashion")
 const accountBtn = document.querySelector("#account")
 const fashionBigBtn = document.querySelector("#goFashion")
+const cartHeaderBtn = document.querySelector("#userProducts")
 
 logoutBtn.addEventListener('click', e => {
     localStorage.removeItem('UserID')
@@ -33,6 +36,7 @@ const hideAll = () => {
     login.classList.add('hidden');
     newUser.classList.add('hidden');
     page404.classList.add('hidden');
+    userProducts.classList.add('hidden');
 }
 
 const checkUser = () => {
@@ -40,6 +44,7 @@ const checkUser = () => {
         signInBtn.classList.add("hidden")
         signUpBtn.classList.add("hidden")
 
+        cartHeaderBtn.classList.remove("hidden")
         accountBtn.classList.remove("hidden")
         fashionBtn.classList.remove("hidden")
         accountBtn.classList.remove("hidden")
@@ -51,6 +56,7 @@ const checkUser = () => {
         signInBtn.classList.remove("hidden")
         signUpBtn.classList.remove("hidden")
 
+        cartHeaderBtn.classList.add("hidden")
         accountBtn.classList.add("hidden")
         fashionBtn.classList.add("hidden")
         accountBtn.classList.add("hidden")
@@ -59,11 +65,11 @@ const checkUser = () => {
         fashionBigBtn.href = "#login"
     }
 }
-
 const onLocationChange = () => {
     hideAll()
     checkUser()
     checkUserMobile()
+    footer.classList.remove("hidden")
     header.classList.remove("hidden")
     try {
         switch (location.hash) {
@@ -111,6 +117,19 @@ const onLocationChange = () => {
                     CheckPrivilegies()
                     getAllProducts()
                     fashion.classList.remove('hidden');
+                }
+                break;
+
+            case "#userProducts":
+                if (!localStorage.UserID) {
+                    location.hash = 'login'
+                } else {
+                    selectCategoty('shoppingCart')
+                    cartBtn.classList.add('choosenCategory')
+                    buyInCartBtn.classList.remove("hidden")
+                    loadUserProducts('shoppingCart', shoppingCart)
+                    footer.classList.add("hidden")
+                    userProducts.classList.remove('hidden');
                 }
                 break;
 

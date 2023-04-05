@@ -61,6 +61,7 @@ const signUpBtnMobile = menu.querySelector("#signUp")
 const fashionBtnMobile = menu.querySelector("#fashion")
 const accountBtnMobile = menu.querySelector("#account")
 const fashionBigBtnMobile = menu.querySelector("#goFashion")
+const cartBtnMobile = menu.querySelector("#userProducts")
 
 logoutBtnMobile.addEventListener('click', e=>{
     localStorage.removeItem('UserID')
@@ -74,6 +75,7 @@ const checkUserMobile = () =>{
         signInBtnMobile.classList.add("hidden")
         signUpBtnMobile.classList.add("hidden")
 
+        cartBtnMobile.classList.remove("hidden")
         accountBtnMobile.classList.remove("hidden")
         fashionBtnMobile.classList.remove("hidden")
         accountBtnMobile.classList.remove("hidden")
@@ -85,6 +87,7 @@ const checkUserMobile = () =>{
         signInBtnMobile.classList.remove("hidden")
         signUpBtnMobile.classList.remove("hidden")
 
+        cartBtnMobile.classList.add("hidden")
         accountBtnMobile.classList.add("hidden")
         fashionBtnMobile.classList.add("hidden")
         accountBtnMobile.classList.add("hidden")
